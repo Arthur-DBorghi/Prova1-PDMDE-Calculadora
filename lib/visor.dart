@@ -24,7 +24,7 @@ class Visor extends StatelessWidget {
                 style: const TextStyle(
                   fontWeight: FontWeight.w100,
                   decoration: TextDecoration.none,
-                  fontSize: 50,
+                  fontSize: 30,
                   color: Colors.white,
                 ),
               ),

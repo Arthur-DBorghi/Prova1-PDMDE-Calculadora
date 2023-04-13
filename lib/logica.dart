@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Logica{
   static const ops = ['/', 'x', '-', '+', '='];
 
@@ -25,11 +27,25 @@ class Logica{
       criaOperacao(v);
     }else if(v == '<-'){
       delete();
-    }else{
+    }else if(v == '%'){
+      porcentagem();
+    }
+    else{
       incrementaVisor(v);
     }
 
     ultimo = v;
+  }
+
+  porcentagem(){
+    double temp = double.parse(_numero);
+    temp = temp/100;
+    if(indice == 0){
+      _valores[0] = temp;
+    }else{
+      _valores[1] = temp;
+    }
+    _numero = temp.toString();
   }
 
   delete(){
@@ -49,6 +65,12 @@ class Logica{
       indice = 1;
       limpo = true;
     }else{
+      
+      if(operador == '/' && _valores[1] == 0){
+        _numero = 'ERRO: Divisão por 0';
+        return;
+      }
+
       _valores[0] = operar();
       _valores[1] = 0.0;
       _numero = _valores[0].toString();
@@ -97,6 +119,8 @@ class Logica{
         return _valores[0] - _valores[1];
       case '+': 
         return _valores[0] + _valores[1];
+      case '%':
+        return _valores[0] % _valores[1];
       default:
         return _valores[0];
     }

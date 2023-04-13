@@ -16,8 +16,9 @@ class Botoes extends StatelessWidget {
       child: Column(
         children: <Widget> [
           linha_botao([
-            CriaBotao(botao: 'C', operacao: true, duplo: true, resposta: valBotao,),
+            CriaBotao(botao: 'C', operacao: true, resposta: valBotao,),
             CriaBotao(botao: '<-', operacao: true, resposta: valBotao,),
+            CriaBotao(botao: '%', operacao: true, resposta: valBotao,),
             CriaBotao(botao: '/', operacao: true, resposta: valBotao,),
           ]),
           linha_botao([
