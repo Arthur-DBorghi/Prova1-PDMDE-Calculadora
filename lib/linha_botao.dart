@@ -3,6 +3,7 @@ import 'cria_botao.dart';
 
 class linha_botao extends StatelessWidget {
 
+  //Cria uma lista de botoes
   final List<CriaBotao> botoes;
 
   const linha_botao(this.botoes, {super.key});

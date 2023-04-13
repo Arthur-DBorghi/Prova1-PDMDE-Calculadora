@@ -13,6 +13,8 @@ class Calculadora extends StatefulWidget {
 class _CalculadoraState extends State<Calculadora> {
   final Logica valor = Logica();
 
+
+  //Função que recebe o valor do botão pressionado e envia para a parte logicar fazer a conta
   pressionado (String v){
     setState(() {
       valor.calcular(v);
@@ -25,8 +27,8 @@ class _CalculadoraState extends State<Calculadora> {
       debugShowCheckedModeBanner: false,
       home: Column(
         children: <Widget>[
-          Visor(valor.numero),
-          Botoes(pressionado),
+          Visor(valor.numero), //Construtor do visor da calculadora
+          Botoes(pressionado), //Construtor de todos os botões da calculadora
         ],
       )
     );
