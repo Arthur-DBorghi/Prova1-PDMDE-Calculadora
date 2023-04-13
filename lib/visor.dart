@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Visor extends StatelessWidget {
-
   final String valor;
   const Visor(this.valor, {super.key});
 
