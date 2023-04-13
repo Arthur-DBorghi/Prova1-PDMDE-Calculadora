@@ -1,6 +1,6 @@
 # calculadora
 
-A new Flutter project.
+Calculadora simples contendo operações de adição, subtração, multiplicação, divisão e porcentagem, desenvolvida como método avaliativo da matéria de Programação de Dispositivos Móveis.
 
 ## Getting Started
 
