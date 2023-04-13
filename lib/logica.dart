@@ -76,7 +76,12 @@ class Logica{
       //Verifica se é uma divisão por 0
       if(operador == '/' && _valores[1] == 0){
         _numero = 'ERRO: Divisão por 0';
+        
+        bool igual = op == '=';
+        operador = igual ? '' : op;
+        indice = igual ? 0 : 1;
 
+        limpo = !igual;
         return;
       }
 
